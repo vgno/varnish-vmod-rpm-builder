@@ -1,0 +1,5 @@
+[varnish]
+name=Varnish
+baseurl=https://repo.varnish-cache.org/redhat/varnish-4.1/el$releasever
+enabled=1
+gpgcheck=0

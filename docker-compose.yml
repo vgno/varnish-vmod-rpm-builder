@@ -1,0 +1,4 @@
+varnish-vmod-rpm-builder:
+  build: .
+  volumes:
+    - RPMS:/root/rpmbuild/RPMS
