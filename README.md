@@ -1,10 +1,12 @@
-= Docker image to build vmods for varnish
+# Docker image to build vmods for varnish
+
+## Build and Run
 
 ```console
 docker build -t vmodbuild .
 docker run --rm vmodbuild /bin/bash
 ```
-Now within the image
+## Copy the files to someplace
 
 ```console
 cd /root/rpmbuild/RPMS/x86_64/
