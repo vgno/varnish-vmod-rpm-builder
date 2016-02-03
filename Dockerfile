@@ -6,7 +6,7 @@ COPY yum-varnish4-community.repo /etc/yum.repos.d/varnish.repo
 RUN yum -q makecache && \
     curl -O https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     rpm -Uvh epel-release-latest-7.noarch.rpm
-RUN yum install -y rpm-build jemalloc-devel libedit-devel ncurses-devel pcre-devel python-docutils python-sphinx wget git automake autoconf libtool mock make logrotate initscripts systemd-sysv libcurl-devel vim geoip-devel mhash-devel
+RUN yum install -y rpm-build jemalloc-devel libedit-devel ncurses-devel pcre-devel python-docutils python-sphinx wget git automake autoconf libtool mock make logrotate initscripts systemd-sysv libcurl-devel vim geoip-devel mhash-devel libmaxminddb-devel
 WORKDIR /root
 RUN wget https://repo.varnish-cache.org/redhat/varnish-4.1/el7/src/varnish/varnish-4.1.1-1.el7.src.rpm
 RUN rpm -Uvh varnish-4.1.1-1.el7.src.rpm
