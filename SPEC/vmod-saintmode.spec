@@ -1,16 +1,16 @@
 Summary: saintmode support for Varnish VCL
 Name: vmod-saintmode
-Version: 4.1.20150129
+Version: 4.1.20161215
 Release: 1%{?dist}
 License: BSD
 Group: System Environment/Daemons
 Source0: libvmod-saintmode.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: varnish >= 4.0.2
+Requires: varnish >= 4.1.4
 BuildRequires: make
 BuildRequires: python-docutils
-BuildRequires: varnish >= 4.0.2
-BuildRequires: varnish-libs-devel >= 4.0.2
+BuildRequires: varnish >= 4.1.4
+BuildRequires: varnish-devel >= 4.1.4
 
 %description
 saintmode support for Varnish VCL
