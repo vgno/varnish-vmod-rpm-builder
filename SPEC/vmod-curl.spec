@@ -23,7 +23,6 @@ CURL support for Varnish VCL
 ./autogen.sh
 ./configure --prefix=/usr/ --docdir='${datarootdir}/doc/%{name}'
 make
-#make check
 
 %install
 make install DESTDIR=%{buildroot}
@@ -36,7 +35,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/varnis*/vmods/
+%{_libdir}/varnish/vmods/
 %doc /usr/share/doc/%{name}/*
 %{_mandir}/man?/*
 

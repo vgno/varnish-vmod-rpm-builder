@@ -27,15 +27,13 @@ make
 %install
 make install DESTDIR=%{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/%{name}/
-cp README.rst %{buildroot}/usr/share/doc/%{name}/
-cp LICENSE %{buildroot}/usr/share/doc/%{name}/
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/varnis*/vmods/
+%{_libdir}/varnish/vmods/
 %doc /usr/share/doc/%{name}/*
 %{_mandir}/man?/*
 
