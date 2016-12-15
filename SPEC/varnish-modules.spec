@@ -1,4 +1,4 @@
-Summary: var support for Varnish VCL
+Summary: Collection of Varnish Cache modules (vmods) by Varnish Software
 Name: varnish-modules
 Version: 4.1.20161215
 Release: 1%{?dist}
