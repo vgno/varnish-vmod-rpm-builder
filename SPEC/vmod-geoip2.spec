@@ -1,16 +1,16 @@
 Summary: geoip2 support for Varnish VCL
 Name: vmod-geoip2
-Version: 4.1.20150129
+Version: 4.1.20161215
 Release: 1%{?dist}
 License: BSD
 Group: System Environment/Daemons
 Source0: libvmod-geoip2.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: varnish >= 4.0.2
+Requires: varnish >= 4.1.4
 BuildRequires: make
 BuildRequires: python-docutils
-BuildRequires: varnish >= 4.0.2
-BuildRequires: varnish-libs-devel >= 4.0.2
+BuildRequires: varnish >= 4.1.4
+BuildRequires: varnish-devel >= 4.1.4
 
 %description
 geoip2 support for Varnish VCL
@@ -27,15 +27,13 @@ make
 %install
 make install DESTDIR=%{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/%{name}/
-cp README.rst %{buildroot}/usr/share/doc/%{name}/
-cp LICENSE %{buildroot}/usr/share/doc/%{name}/
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/varnis*/vmods/
+%{_libdir}/varnish/vmods/
 %doc /usr/share/doc/%{name}/*
 %{_mandir}/man?/*
 

@@ -1,16 +1,16 @@
 Summary: CURL support for Varnish VCL
 Name: vmod-curl
-Version: 4.1.20150129
+Version: 4.1.20161215
 Release: 1%{?dist}
 License: BSD
 Group: System Environment/Daemons
 Source0: libvmod-curl.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: varnish >= 4.0.2
+Requires: varnish >= 4.1.4
 BuildRequires: make
 BuildRequires: python-docutils
-BuildRequires: varnish >= 4.0.2
-BuildRequires: varnish-libs-devel >= 4.0.2
+BuildRequires: varnish >= 4.1.4
+BuildRequires: varnish-devel >= 4.1.4
 BuildRequires: curl-devel > 7.19.0
 
 %description
@@ -23,7 +23,6 @@ CURL support for Varnish VCL
 ./autogen.sh
 ./configure --prefix=/usr/ --docdir='${datarootdir}/doc/%{name}'
 make
-#make check
 
 %install
 make install DESTDIR=%{buildroot}
@@ -36,7 +35,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/varnis*/vmods/
+%{_libdir}/varnish/vmods/
 %doc /usr/share/doc/%{name}/*
 %{_mandir}/man?/*
 
