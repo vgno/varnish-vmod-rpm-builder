@@ -20,7 +20,7 @@ Collection of Varnish Cache modules (vmods) by Varnish Software
 
 %build
 ./bootstrap
-./configure --prefix=/usr/ --docdir='${datarootdir}/doc/%{name}'
+./configure --docdir='${datarootdir}/doc/%{name}'
 make
 
 %install
